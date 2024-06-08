@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Fiendish';
+  src: url('./Fonts/fiendish.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Another Danger';
+  src: url('./Fonts/another-danger.ttf') format('truetype');
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Another Danger';
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#countdown {
+  font-family: 'Fiendish', cursive; /* Aggiunto il font per il countdown */
+  color: red;
+  font-size: 5em;
+}
+
+#announcement {
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+#logo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px; /* Adjust as necessary */
+}
+
+@media (max-width: 600px) {
+  #countdown {
+    font-size: 3em;
+  }
+  #announcement {
+    font-size: 1em;
+  }
+}
