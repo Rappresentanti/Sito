@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Russian';
+  src: url("Fonts/Russian.ttf");
+}
+body {
+  background-color: white;
+  color: black;
+  font-family: Arial;
+}
+.banner {
+  width: 100%;
+  height: 300px;
+  background-image: url('Images/noi.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.title {
+  font-family: 'Russian';
+  font-size: 54px;
+  text-align: center;
+  margin: 20px 0;
+}
+.content {
+  margin: 20px;
+}
+#newsletter-form button, .instagram-button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 0;
+}
+.bottom-bar {
+  width: 100%;
+  height: 50px;
+  background-color: red;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Regole per l'header e il banner */
+#header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  transition: height 0.3s ease-in-out;
+}
+
+#banner {
+  height: 70vh; /* Imposta l'altezza iniziale del banner */
+  transition: height 0.3s ease-in-out;
+}
+
+/* Ridimensiona il banner quando ha la classe .smaller */
+#banner.smaller {
+  height: 20vh;
+}
+
+.title {
+  font-size: 48px;
+  transition: font-size 0.3s ease-in-out;
+}
+
+/* Ridimensiona il titolo quando il banner ha la classe .smaller */
+#banner.smaller .title {
+  font-size: 24px;
+}
