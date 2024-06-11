@@ -126,3 +126,23 @@ main {
     top: 60px; /* Distanza dal top dell'header */
   }
 }
+
+/*TRANSIZIONI*/
+
+.banner, .small-header {
+  transition: height 0.5s, padding 0.5s;
+} /* transizione per il cambio di altezza del banner */
+
+.logo, .small-logo {
+  transition: max-height 0.5s;
+}/* transizione al logo per una riduzione di dimensione più fluida */
+
+.dropdown-menu {
+  transition: transform 0.5s;
+  transform: scaleY(0);
+  transform-origin: top;
+}/* transizione per il menu a tendina */
+
+#menu-toggle:checked + .menu-icon + .dropdown-menu {
+  transform: scaleY(1);
+}/* Modifica lo stato visualizzato del menu a tendina con una trasformazione */
