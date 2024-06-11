@@ -1,73 +1,128 @@
 @font-face {
   font-family: 'Russian';
-  src: url("Fonts/Russian.ttf");
+  src: url('Fonts/Russian.ttf');
 }
-body {
-  background-color: white;
-  color: black;
-  font-family: Arial;
+body, html {
+  margin: 0;
+  padding: 0;
 }
-.banner {
-  width: 100%;
-  height: 300px;
-  background-image: url('Images/noi.jpg');
-  background-size: cover;
-  background-position: center;
-}
-.title {
-  font-family: 'Russian';
-  font-size: 54px;
-  text-align: center;
-  margin: 20px 0;
-}
-.content {
-  margin: 20px;
-}
-#newsletter-form button, .instagram-button {
-  background-color: red;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  display: inline-block;
-  margin: 10px 0;
-}
-.bottom-bar {
-  width: 100%;
-  height: 50px;
+header {
   background-color: red;
   position: fixed;
-  bottom: 0;
-  left: 0;
-  text-align: center;
+  width: 100%;
+  z-index: 10;
+  height: auto;
+}
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 10px;
 }
-
-/* Regole per l'header e il banner */
-#header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+.logo {
+  max-height: 150px; /* Aumenta la dimensione del logo */
+  transition: max-height 0.5s;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; /* Spazio tra il logo e le icone */
+}
+.social-icons img {
+  height: 50px; /* Aumenta la dimensione delle icone */
+  margin: 0 10px;
+}
+.vote {
   background-color: white;
-  transition: height 0.3s ease-in-out;
+  color:black;
+  text-align: center;
+  padding: 50px;
+  font-family: 'Russian', sans-serif;
+  margin-top: 60px;
+}
+.vote h1 {
+  font-size: 4em; /* Aumenta la dimensione del titolo 'Vota per noi' */
+}
+main {
+  padding-top: 120px;
+}
+.ideas, .projects {
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .logo {
+    max-height: 50px;
+  }
+}
+.small-header {
+  padding: 5px 10px; /* Riduci il padding per un header più piccolo */
 }
 
-#banner {
-  height: 70vh; /* Imposta l'altezza iniziale del banner */
-  transition: height 0.3s ease-in-out;
+.small-logo {
+  max-height: 50px; /* Riduci la dimensione del logo */
+  order: -1; /* Sposta il logo a sinistra */
 }
 
-/* Ridimensiona il banner quando ha la classe .smaller */
-#banner.smaller {
-  height: 20vh;
+.social-icons-right {
+  margin-left: auto; /* Sposta le icone social a destra */
 }
 
-.title {
-  font-size: 48px;
-  transition: font-size 0.3s ease-in-out;
+/* Assicurati di avere una regola media query per gestire il layout su dispositivi mobili */
+@media (max-width: 768px) {
+  .small-header {
+    padding: 5px; /* Ulteriore riduzione del padding per dispositivi mobili */
+  }
+  
+  .small-logo, .social-icons img {
+    height: 30px; /* Riduci ulteriormente la dimensione per dispositivi mobili */
+  }
 }
+.hamburger-menu {
+  display: flex;
+  justify-content: flex-end; /* Allinea il contenitore del menu a destra */
+}
+.menu-icon {
+  display: block; /* Assicurati che l'icona del menu sia visibile */
+  order: 1; /* Posiziona l'icona del menu dopo gli elementi del menu */
+  font-size: 2em;
+}
+#menu-toggle {
+  display: none; /* Nasconde la checkbox */
+}
+#menu-toggle:checked + .menu-icon + .dropdown-menu {
+  display: flex; /* Mostra il menu a tendina quando la checkbox è selezionata */
+}
+.dropdown-menu {
+  display: none; /* Nasconde il menu a tendina di default */
+  flex-direction: column;
+  align-items: flex-end; /* Allinea gli elementi del menu a destra */
+}
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.dropdown-menu li {
+  border-bottom: 1px solid #ddd;
+}
+.dropdown-menu a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 15px 20px;
+}
+.dropdown-menu a:hover {
+  background-color: #f2f2f2;
+}
+@media (max-width: 768px) {
+  .hamburger-menu {
+    justify-content: space-between; /* Distanzia l'icona del menu e gli elementi del menu */
+  }
 
-/* Ridimensiona il titolo quando il banner ha la classe .smaller */
-#banner.smaller .title {
-  font-size: 24px;
+  .dropdown-menu {
+    position: absolute;
+    right: 0; /* Posiziona il menu a tendina a destra */
+    top: 60px; /* Distanza dal top dell'header */
+  }
 }
