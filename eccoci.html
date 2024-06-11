@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eccoci</title>
-  <link rel="stylesheet" href="stile_eccoci.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOTA PER NOI</title>
+<link rel="stylesheet" href="stile_eccoci.css">
 </head>
 <body>
-
-<div class="banner"></div>
-<h1 class="title">Vota per noi</h1>
-
-<div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-  
-  <form id="newsletter-form">
-    <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
-    <button type="submit">Iscriviti alla Newsletter</button>
-  </form>
-  
-  <a href="https://www.instagram.com/IL_TUO_USERNAME" target="_blank" class="instagram-button">Seguici su Instagram</a>
-</div>
-
-<div class="bottom-bar">
-  <p>Informazioni del gruppo</p>
-</div>
-
+<header>
+  <div class="banner">
+    <img src="Images/logo.png" alt="Logo" class="logo">
+    <div class="social-icons">
+      <a href="https://www.instagram.com" target="_blank"><img src="Images/instagram.png" alt="Instagram"></a>
+      <a href="newsletter.html" target="_blank"><img src="Images/newsletter.png" alt="Newsletter"></a>
+      <a href="https://wa.me/your-group-link" target="_blank"><img src="Images/whatsapp.png" alt="WhatsApp"></a>
+    </div>
+	<div class="hamburger-menu">
+		<input type="checkbox" id="menu-toggle">
+		<label for="menu-toggle" class="menu-icon">☰</label>
+		<nav class="dropdown-menu">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#ideas">Le nostre idee</a></li>
+				<li><a href="#projects">I nostri progetti</a></li>
+				<li><a href="#contact">Contatti</a></li>
+			</ul>
+		</nav>
+	</div>
+  </div>
+</header>
+<main>
+  <section class="vote">
+    <h1>Vota per noi</h1>
+  </section>
+  <section class="ideas">
+    <h2>Le nostre idee</h2>
+    <p>Lorem ipsum dolor sit amet...</p>
+  </section>
+  <section class="projects">
+    <h2>I nostri progetti</h2>
+    <p>Lorem ipsum dolor sit amet...</p>
+  </section>
+</main>
 <script src="script_eccoci.js"></script>
-
 </body>
 </html>
