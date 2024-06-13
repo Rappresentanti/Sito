@@ -16,7 +16,7 @@ header {
 .banner {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: auto;
   padding: 10px;
 }
 .logo {
@@ -82,7 +82,8 @@ main {
 }
 .hamburger-menu {
   display: flex;
-  justify-content: flex-end; /* Allinea il contenitore del menu a destra */
+  justify-content: flex-end;
+  align-items: left; /* Allinea il contenitore del menu a sinistra */
 }
 .menu-icon {
   display: block; /* Assicurati che l'icona del menu sia visibile */
