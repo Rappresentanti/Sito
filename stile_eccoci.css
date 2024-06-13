@@ -80,55 +80,6 @@ main {
     width: 30px; /* Riduci ulteriormente la dimensione per dispositivi mobili */
   }
 }
-.hamburger-menu {
-  justify-content: flex-end;
-  align-items: left;
-  display: block; /* Allinea il contenitore del menu a sinistra */
-}
-.menu-icon {
-  display: block; /* Assicurati che l'icona del menu sia visibile */
-  order: 1; /* Posiziona l'icona del menu dopo gli elementi del menu */
-  font-size: 2em;
-}
-#menu-toggle {
-  display: none; /* Nasconde la checkbox */
-}
-#menu-toggle:checked + .menu-icon + .dropdown-menu {
-  display: flex; /* Mostra il menu a tendina quando la checkbox è selezionata */
-}
-.dropdown-menu {
-  display: none; /* Nasconde il menu a tendina di default */
-  flex-direction: column;
-  align-items: flex-end; /* Allinea gli elementi del menu a destra */
-}
-.dropdown-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.dropdown-menu li {
-  border-bottom: 1px solid #ddd;
-}
-.dropdown-menu a {
-  text-decoration: none;
-  color: black;
-  display: block;
-  padding: 15px 20px;
-}
-.dropdown-menu a:hover {
-  background-color: #f2f2f2;
-}
-@media (max-width: 768px) {
-  .hamburger-menu {
-    justify-content: space-between; /* Distanzia l'icona del menu e gli elementi del menu */
-  }
-
-  .dropdown-menu {
-    position: absolute;
-    right: 0; /* Posiziona il menu a tendina a destra */
-    top: 60px; /* Distanza dal top dell'header */
-  }
-}
 
 /*TRANSIZIONI*/
 
