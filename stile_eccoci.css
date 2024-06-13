@@ -14,7 +14,6 @@ header {
   height: auto;
 }
 .banner {
-  display: flex;
   flex-direction: column;
   align-items: auto;
   padding: 10px;
@@ -22,6 +21,7 @@ header {
 .logo {
   max-height: 150px; /* Aumenta la dimensione del logo */
   transition: max-height 0.5s;
+  display: flex;
 }
 .social-icons {
   display: flex;
@@ -82,7 +82,8 @@ main {
 }
 .hamburger-menu {
   justify-content: flex-end;
-  align-items: left; /* Allinea il contenitore del menu a sinistra */
+  align-items: left;
+  display: block; /* Allinea il contenitore del menu a sinistra */
 }
 .menu-icon {
   display: block; /* Assicurati che l'icona del menu sia visibile */
