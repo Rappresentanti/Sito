@@ -42,6 +42,12 @@ header {
   font-family: 'Russian', sans-serif;
   margin-top: 60px;
 }
+.Titolo{
+  text-align: center;
+  padding: 50px;
+  font-family: 'Russian', sans-serif;
+  margin-top: 20px;
+}
 .vote h1 {
   font-size: 4em; /* Aumenta la dimensione del titolo 'Vota per noi' */
 }
