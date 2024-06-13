@@ -76,7 +76,8 @@ main {
   }
   
   .small-logo, .social-icons img {
-    height: 30px; /* Riduci ulteriormente la dimensione per dispositivi mobili */
+    height: 30px;
+    width: 30px; /* Riduci ulteriormente la dimensione per dispositivi mobili */
   }
 }
 .hamburger-menu {
