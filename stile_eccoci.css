@@ -30,8 +30,9 @@ header {
   margin-top: 10px; /* Spazio tra il logo e le icone */
 }
 .social-icons img {
-  height: 50px; /* Aumenta la dimensione delle icone */
+  height: 80px; /* Aumenta la dimensione delle icone */
   margin: 0 10px;
+  width: 80px;
 }
 .vote {
   background-color: white;
