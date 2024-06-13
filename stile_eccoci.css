@@ -81,7 +81,6 @@ main {
   }
 }
 .hamburger-menu {
-  display: flex;
   justify-content: flex-end;
   align-items: left; /* Allinea il contenitore del menu a sinistra */
 }
