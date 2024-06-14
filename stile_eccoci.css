@@ -39,6 +39,7 @@ main {
 .timer{
   font-size: 30px;
   text-align: center;
+  white-space: nowrap;
 }
 @media (max-width: 768px) {
   header .topbar {
