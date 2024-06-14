@@ -15,7 +15,6 @@ header .topbar {
   position: fixed;
   width: 100%;
   z-index: 10;
-  position: relative;
 }
 .logo {
   max-height: 50px;
