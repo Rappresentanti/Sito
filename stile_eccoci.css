@@ -33,7 +33,7 @@ header .topbar {
 main {
   padding-top: 60px; /* Spazio per la topbar fissa */
 }
-.timer, .news, {
+.timer, .news {
   padding: 20px;
 }
 @media (max-width: 768px) {
