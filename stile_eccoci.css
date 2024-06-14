@@ -31,13 +31,13 @@ header .topbar {
   font-family: 'Russian', sans-serif;
 }
 main {
-  padding-top: 60px; /* Spazio per la topbar fissa */
+  padding-top: 70px; /* Spazio per la topbar fissa */
 }
 .timer, .news {
   padding: 20px;
 }
 .timer{
-  font-size: large;
+  font-size: 30px;
   text-align: center;
 }
 @media (max-width: 768px) {
@@ -49,6 +49,6 @@ main {
   }
   .votaci {
     order: 2;
-    padding: 10px 0;
+    padding: 10px 20px;
   }
 }
