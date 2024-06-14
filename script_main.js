@@ -26,3 +26,7 @@ var x = setInterval(function() {
     document.getElementById("countdown").innerHTML = "EXPIRED";
   }
 }, 1000);
+function toggleMenu() {
+  var sideMenu = document.getElementById('sideMenu');
+  sideMenu.classList.toggle('active');
+}
