@@ -1,4 +1,3 @@
-</html>
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -9,31 +8,35 @@
 </head>
 <body>
 <header>
-  <div class="banner">
+  <div class="topbar">
     <img src="Images/logo.png" alt="Logo" class="logo">
+    <h1 class="votaci">VOTACI</h1>
     <div class="social-icons">
       <a href="https://www.instagram.com" target="_blank"><img src="Images/instagram.png" alt="Instagram"></a>
       <a href="newsletter.html" target="_blank"><img src="Images/newsletter_new.png" alt="Newsletter"></a>
       <a href="https://wa.me/your-group-link" target="_blank"><img src="Images/whatsapp.png" alt="WhatsApp"></a>
     </div>
-    <div class="titolo">
-      <h2 class="titolo"> Nuovi rappresentanti del Fermi </h2>
-    </div>
   </div>
 </header>
 <main>
-  <section class="vote">
-    <h1>Vota per noi</h1>
+  <section class="timer">
+    <p id="countdown">Prossima novità tra...</p>
+    <!-- Il timer sarà collegato tramite script_main.js -->
   </section>
-  <section class="ideas">
-    <h2>Le nostre idee</h2>
-    <p>Lorem ipsum dolor sit amet...</p>
+  <section class="news">
+    <h2>Ultime Notizie</h2>
+    <!-- Contenuto delle notizie qui -->
   </section>
-  <section class="projects">
-    <h2>I nostri progetti</h2>
-    <p>Lorem ipsum dolor sit amet...</p>
-  </section>
+  <nav class="dropdown-menu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#manifesto">Manifesto</a></li>
+      <li><a href="#domande">Domande</a></li>
+      <li><a href="#chi-siamo">Chi Siamo</a></li>
+    </ul>
+  </nav>
+  <!-- Sezioni del sito qui -->
 </main>
-<script src="script_eccoci.js"></script>
+<script src="script_main.js"></script>
 </body>
 </html>

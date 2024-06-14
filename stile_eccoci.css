@@ -6,94 +6,56 @@ body, html {
   margin: 0;
   padding: 0;
 }
-header {
-  background-color: red;
+header .topbar {
+  background-color: #ff0000; /* Colore rosso per la topbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
   position: fixed;
   width: 100%;
   z-index: 10;
-  height: auto;
-}
-.banner {
-  flex-direction: column;
-  align-items: auto;
-  padding: 10px;
 }
 .logo {
-  max-height: 150px; /* Aumenta la dimensione del logo */
+  max-height: 50px;
   transition: max-height 0.5s;
-  display: flex;
-}
-.social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px; /* Spazio tra il logo e le icone */
 }
 .social-icons img {
-  height: 80px; /* Aumenta la dimensione delle icone */
+  height: 30px;
   margin: 0 10px;
-  width: 80px;
+  width: 30px;
 }
-.vote {
-  background-color: white;
-  color:black;
-  text-align: center;
-  padding: 50px;
+.votaci {
+  color: white;
   font-family: 'Russian', sans-serif;
-  margin-top: 70px;
-}
-.titolo h2 {
-  background-color: red;
-  color:black;
-  text-align: center;
-  padding: 50px;
-  font-family: 'Russian', sans-serif;
-  margin-top: 20px;
-}
-.vote h1 {
-  font-size: 4em; /* Aumenta la dimensione del titolo 'Vota per noi' */
 }
 main {
-  padding-top: 120px;
+  padding-top: 60px; /* Spazio per la topbar fissa */
 }
-.ideas, .projects {
+.timer, .news, .dropdown-menu {
   padding: 20px;
 }
+.dropdown-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+.dropdown-menu li {
+  padding: 8px;
+  background-color: #f0f0f0;
+  margin-bottom: 2px;
+}
+.dropdown-menu li:hover {
+  background-color: #e0e0e0;
+}
 @media (max-width: 768px) {
-  .logo {
-    max-height: 50px;
+  header .topbar {
+    flex-direction: column;
+  }
+  .social-icons {
+    order: 3;
+  }
+  .votaci {
+    order: 2;
+    padding: 10px 0;
   }
 }
-.small-header {
-  padding: 5px 10px; /* Riduci il padding per un header più piccolo */
-}
-
-.small-logo {
-  max-height: 50px; /* Riduci la dimensione del logo */
-  order: -1; /* Sposta il logo a sinistra */
-}
-
-.social-icons-right {
-  margin-left: auto; /* Sposta le icone social a destra */
-}
-
-/* Assicurati di avere una regola media query per gestire il layout su dispositivi mobili */
-@media (max-width: 768px) {
-  .small-header {
-    padding: 5px; /* Ulteriore riduzione del padding per dispositivi mobili */
-  }
-  
-  .small-logo, .social-icons img {
-    height: 30px;
-    width: 30px; /* Riduci ulteriormente la dimensione per dispositivi mobili */
-  }
-}
-/*TRANSIZIONI*/
-
-.banner, .small-header {
-  transition: height 0.5s, padding 0.5s;
-} /* transizione per il cambio di altezza del banner */
-
-.logo, .small-logo {
-  transition: max-height 0.5s;
-}/* transizione al logo per una riduzione di dimensione più fluida */
