@@ -33,26 +33,20 @@ header .topbar {
 main {
   padding-top: 60px; /* Spazio per la topbar fissa */
 }
-.timer, .news, .dropdown-menu {
+.timer, .news, .side-menu {
   padding: 20px;
 }
-.dropdown-menu ul {
+.side-menu ul {
   list-style-type: none;
   padding: 0;
 }
-.dropdown-menu li {
+.side-menu li {
   padding: 8px;
   background-color: #f0f0f0;
   margin-bottom: 2px;
 }
-.dropdown-menu li:hover {
+.side-menu li:hover {
   background-color: #e0e0e0;
-}
-.menu-toggle {
-  cursor: pointer;
-  font-size: 24px;
-  user-select: none;
-  z-index: 2; /* Assicurati che il toggle sia cliccabile */
 }
 .side-menu {
   background-color: #fff;
@@ -64,6 +58,10 @@ main {
   width: 250px;
   z-index: 1;
   transform: translateX(-100%);
+  cursor: pointer;
+  font-size: 24px;
+  user-select: none;
+  z-index: 2; /* Assicurati che il toggle sia cliccabile */
 }
 .side-menu.active {
   transform: translateX(0);
