@@ -36,6 +36,9 @@ main {
 .timer, .news {
   padding: 20px;
 }
+.timer{
+  font-size: large;
+}
 @media (max-width: 768px) {
   header .topbar {
     flex-direction: column;
