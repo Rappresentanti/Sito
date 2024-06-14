@@ -29,7 +29,7 @@
 </header>
 <main>
   <section class="timer">
-    <p id="countdown">Prossima novità tra...</p>
+    <p>Prossima novità tra... </p><p id="countdown">00:00:00</p>
     <!-- Il timer sarà collegato tramite script_main.js -->
   </section>
   <section class="news">
@@ -38,5 +38,11 @@
   </section>
 </main>
 <script src="script_main.js"></script>
+<script>
+  function toggleMenu() {
+    var sideMenu = document.getElementById('sideMenu');
+    sideMenu.classList.toggle('active');
+  }
+</script>
 </body>
 </html>

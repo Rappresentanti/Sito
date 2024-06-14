@@ -20,6 +20,7 @@ header .topbar {
 .logo {
   max-height: 50px;
   transition: max-height 0.5s;
+  z-index: 2; /* Assicurati che il logo sia sopra il menu */
 }
 .social-icons img {
   height: 30px;
@@ -52,19 +53,21 @@ main {
   cursor: pointer;
   font-size: 24px;
   user-select: none;
+  z-index: 2; /* Assicurati che il toggle sia cliccabile */
 }
 .side-menu {
   background-color: #fff;
   height: 100%;
-  left: -250px;
+  left: 0;
   position: fixed;
-  top: 0;
-  transition: left 0.3s;
+  top: 60px; /* Posiziona il menu sotto al logo */
+  transition: transform 0.3s;
   width: 250px;
-  z-index: 15;
+  z-index: 1;
+  transform: translateX(-100%);
 }
 .side-menu.active {
-  left: 0;
+  transform: translateX(0);
 }
 @media (max-width: 768px) {
   header .topbar {
