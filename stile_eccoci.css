@@ -33,38 +33,8 @@ header .topbar {
 main {
   padding-top: 60px; /* Spazio per la topbar fissa */
 }
-.timer, .news, .side-menu {
+.timer, .news, {
   padding: 20px;
-}
-.side-menu ul {
-  list-style-type: none;
-  padding: 0;
-}
-.side-menu li {
-  padding: 8px;
-  background-color: #f0f0f0;
-  margin-bottom: 2px;
-}
-.side-menu li:hover {
-  background-color: #e0e0e0;
-}
-.side-menu {
-  background-color: #fff;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 60px; /* Posiziona il menu sotto al logo */
-  transition: transform 0.3s;
-  width: 250px;
-  z-index: 1;
-  transform: translateX(-100%);
-  cursor: pointer;
-  font-size: 24px;
-  user-select: none;
-  z-index: 2; /* Assicurati che il toggle sia cliccabile */
-}
-.side-menu.active {
-  transform: translateX(0);
 }
 @media (max-width: 768px) {
   header .topbar {
