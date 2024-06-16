@@ -8,9 +8,6 @@ body, html {
 }
 header .topbar {
   background-color: #ff0000; /* Colore rosso per la topbar */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 10px;
   position: fixed;
   width: 100%;
