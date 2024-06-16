@@ -49,7 +49,17 @@ body {
   border: 1px solid #ccc;
   padding: 15px;
   font-family: 'Times New Roman', serif;
-  background-color: #f9f9f9;
+  background-color: #f3f3d1; /* Colore giallognolo per lo sfondo */
+  border-radius: 15px; /* Angoli stondati */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per profondità */
+  overflow: hidden; /* Assicura che tutto all'interno della card rimanga entro i bordi stondati */
+}
+
+.news-card img {
+  width: 100%; /* Assicura che l'immagine si adatti alla larghezza della card */
+  border-bottom: 1px solid #ccc; /* Linea di separazione tra immagine e testo */
+  border-top-left-radius: 15px; /* Angoli stondati per l'immagine in alto a sinistra */
+  border-top-right-radius: 15px; /* Angoli stondati per l'immagine in alto a destra */
 }
 
 .news-card h2 {
@@ -66,7 +76,6 @@ body {
   font-style: italic;
   font-size: 0.8em;
 }
-
 
 @font-face { 
   font-family: 'RussianFont'; 
