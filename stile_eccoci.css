@@ -21,6 +21,10 @@ header .topbar {
   justify-content: space-between;
   align-items: left;
 }
+ul {
+  list-style-type: none;
+  padding: 0;
+}
 li {
   float: left;
 }
