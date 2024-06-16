@@ -54,7 +54,7 @@ body {
 
 @font-face{
   font-family: 'Clock';
-  src: url('Fonts/alarm\ clock.ttf')
+  src: url('Fonts/alarm-clock.ttf')
 }
 
 @media (max-width: 768px) {
