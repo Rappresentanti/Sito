@@ -19,6 +19,7 @@ body {
   color: white; 
   text-decoration: none; 
   padding: 0 10px; 
+  font-family: 'Lemon', sans-serif;
 }
 
 .social-icons img { 
@@ -44,6 +45,11 @@ body {
 @font-face { 
   font-family: 'RussianFont'; 
   src: url('Fonts/Russian.ttf'); 
+}
+
+@font-face{
+  font-family: 'Lemon';
+  src: url('Fonts/Lemon.ttf')
 }
 
 @media (max-width: 768px) {
