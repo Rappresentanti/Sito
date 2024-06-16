@@ -9,12 +9,25 @@ body, html {
 header .topbar {
   background-color: #ff0000; /* Colore rosso per la topbar */
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   padding: 10px;
   position: fixed;
   width: 100%;
   z-index: 10;
+}
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%; /* Leggermente staccato dai bordi */
+}
+.navbar-bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 95%; /* Leggermente staccato dai bordi */
+  padding-top: 10px; /* Spazio tra navbar-top e navbar-bottom */
 }
 .logo {
   max-height: 50px;
@@ -34,7 +47,7 @@ header .topbar {
   font-family: 'Russian', sans-serif;
 }
 main {
-  padding-top: 70px; /* Spazio per la topbar fissa */
+  padding-top: 140px; /* Spazio aggiuntivo per la topbar fissa */
 }
 .timer, .news {
   padding: 20px;
