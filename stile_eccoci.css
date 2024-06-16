@@ -7,76 +7,33 @@ body, html {
   padding: 0;
 }
 header .topbar {
-  background-color: #ff0000; /* Colore rosso per la topbar */
+  background-color: #ff0000;
   padding: 10px;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 10;
-}
-.navbar-top, .navbar-bottom {
-  display: inline;
-  justify-content: space-between;
-  align-items: left;
-  list-style-type: none;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-li {
-  float: left;
-}
-a {
-  display: block;
-  padding: 8px;
+  box-sizing: border-box;
 }
 .logo {
-  max-height: 50px;
-  transition: max-height 0.5s;
-  z-index: 2; /* Assicurati che il logo sia sopra il menu */
-}
-.social-icons img, .navigation a {
-  height: 30px;
-  margin: 0 10px;
-  width: 30px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+  height: 50px;
 }
 .votaci {
   color: white;
   font-family: 'Russian', sans-serif;
+  display: inline;
+}
+.social-icons a, .navigation a {
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+}
+.social-icons img {
+  height: 30px;
+}
+.navigation {
+  display: inline;
 }
 main {
-  padding-top: 140px; /* Spazio aggiuntivo per la topbar fissa */
-}
-.timer, .news {
-  padding: 60px;
-}
-.timer {
-  font-size: 30px;
-  text-align: center;
-  white-space: nowrap;
-  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(0,212,255,1) 100%);
-  color: white;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-.news article {
-  margin-bottom: 20px;
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
-}
-@media (max-width: 768px) {
-  header .topbar {
-    flex-direction: column;
-  }
-  .social-icons, .navigation {
-    order: 3;
-  }
-  .votaci {
-    order: 2;
-    padding: 10px 20px;
-  }
+  padding-top: 80px; /* Spazio per la topbar */
 }
