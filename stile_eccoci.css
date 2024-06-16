@@ -55,13 +55,6 @@ body {
   overflow: hidden; /* Assicura che tutto all'interno della card rimanga entro i bordi stondati */
 }
 
-.news-card img {
-  width: 100%; /* Assicura che l'immagine si adatti alla larghezza della card */
-  border-bottom: 1px solid #ccc; /* Linea di separazione tra immagine e testo */
-  border-top-left-radius: 15px; /* Angoli stondati per l'immagine in alto a sinistra */
-  border-top-right-radius: 15px; /* Angoli stondati per l'immagine in alto a destra */
-}
-
 .news-card h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
