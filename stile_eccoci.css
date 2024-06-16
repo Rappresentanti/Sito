@@ -38,9 +38,35 @@ body {
   font-family: 'Clock', sans-serif;
 }
 
-.news-section { 
-  padding: 20px; 
+.news-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
 }
+
+.news-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  font-family: 'Times New Roman', serif;
+  background-color: #f9f9f9;
+}
+
+.news-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.news-card p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.news-card time {
+  font-style: italic;
+  font-size: 0.8em;
+}
+
 
 @font-face { 
   font-family: 'RussianFont'; 
