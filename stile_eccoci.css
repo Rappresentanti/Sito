@@ -21,10 +21,13 @@ header .topbar {
   transition: max-height 0.5s;
   z-index: 2; /* Assicurati che il logo sia sopra il menu */
 }
-.social-icons img {
+.social-icons img, .navigation a {
   height: 30px;
   margin: 0 10px;
   width: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 .votaci {
   color: white;
@@ -36,16 +39,25 @@ main {
 .timer, .news {
   padding: 20px;
 }
-.timer{
+.timer {
   font-size: 30px;
   text-align: center;
   white-space: nowrap;
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(0,212,255,1) 100%);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.news article {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
 }
 @media (max-width: 768px) {
   header .topbar {
     flex-direction: column;
   }
-  .social-icons {
+  .social-icons, .navigation {
     order: 3;
   }
   .votaci {
