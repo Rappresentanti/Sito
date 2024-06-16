@@ -16,18 +16,22 @@ header .topbar {
   width: 100%;
   z-index: 10;
 }
-.navbar-top {
+.navbar-top, .navbar-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 95%; /* Leggermente staccato dai bordi */
+  width: calc(100% - 40px); /* Calcola la larghezza sottraendo lo spazio desiderato dai lati */
+  margin: 0 20px; /* Aggiunge uno spazio di 20px da ciascun lato */
+  padding: 10px 0; /* Aggiunge spazio sopra e sotto all'interno delle navbar */
 }
+
+.navbar-top {
+  order: 1; /* Assicura che la navbar-top sia la prima */
+}
+
 .navbar-bottom {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 95%; /* Leggermente staccato dai bordi */
-  padding-top: 10px; /* Spazio tra navbar-top e navbar-bottom */
+  order: 2; /* Assicura che la navbar-bottom sia la seconda */
+  justify-content: flex-start; /* Allinea i link a sinistra */
 }
 .logo {
   max-height: 50px;
@@ -50,7 +54,7 @@ main {
   padding-top: 140px; /* Spazio aggiuntivo per la topbar fissa */
 }
 .timer, .news {
-  padding: 20px;
+  padding: 60px;
 }
 .timer {
   font-size: 30px;
