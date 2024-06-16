@@ -49,7 +49,7 @@ body {
   border: 1px solid #ccc;
   padding: 15px;
   font-family: 'Times New Roman', serif;
-  background-color: #f3f3d1; /* Colore giallognolo per lo sfondo */
+  background-color: #f5f5c0; /* Colore giallognolo per lo sfondo */
   border-radius: 15px; /* Angoli stondati */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per profondità */
   overflow: hidden; /* Assicura che tutto all'interno della card rimanga entro i bordi stondati */
