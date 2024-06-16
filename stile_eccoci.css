@@ -20,6 +20,7 @@ header .topbar {
   display: inline;
   justify-content: space-between;
   align-items: left;
+  list-style-type: none;
 }
 ul {
   list-style-type: none;
