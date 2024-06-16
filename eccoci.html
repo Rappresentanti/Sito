@@ -5,15 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VOTA PER NOI</title>
   <link rel="stylesheet" href="stile_eccoci.css">
+  <style>
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .menu {
+      max-height: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: max-height 0.5s ease-out;
+    }
+    .menu.show {
+      max-height: 200px; /* Regolare in base all'altezza del contenuto */
+    }
+    .social-icons {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+    .menu img {
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-
 <div class="navbar">
   <img src="Images/logo.png" alt="Logo">
-  <div class="menu">
-    <a href="#manifesto">Manifesto     </a>
-    <a href="#iscriviti">    Iscriviti    </a>
-    <a href="#chi-siamo">     Chi Siamo</a>
+  <img src="Images/menu_icon.png" alt="Menu" id="menu-icon" style="cursor: pointer;">
+  <div class="menu" id="menu">
+    <a href="#manifesto">Manifesto</a>
+    <a href="#iscriviti">Iscriviti</a>
+    <a href="#chi-siamo">Chi Siamo</a>
   </div>
   <div class="social-icons">
     <a href="#instagram"><img src="Images/instagram.png" alt="Instagram"></a>
@@ -21,11 +49,8 @@
     <a href="#whatsapp"><img src="Images/whatsapp.png" alt="WhatsApp"></a>
   </div>
 </div>
-
 <div id="votaci">Votaci</div>
-
 <div id="countdown"></div>
-
 <div class="news-section">
   <div class="news-card">
     <h2>Titolo Notizia</h2>
@@ -35,6 +60,16 @@
   <!-- Altre news-card qui -->
 </div>
 
-<script src="script_main.js"></script>
+<script>
+  document.getElementById('menu-icon').addEventListener('click', function() {
+    var menu = document.getElementById('menu');
+    if (menu.classList.contains('show')) {
+      menu.classList.remove('show');
+    } else {
+      menu.classList.add('show');
+    }
+  });
+</script>
+
 </body>
 </html>
