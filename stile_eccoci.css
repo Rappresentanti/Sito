@@ -22,13 +22,12 @@ body {
 }
 
 .social-icons img { 
-  height: 30px; 
+  height: 40px; 
   margin-left: 10px; 
 }
 #votaci { 
-  font-family: 'RussianFont', 
-  sans-serif; 
-  font-size: 2em; 
+  font-family: 'RussianFont', sans-serif; 
+  font-size: 4em; 
   text-align: center; 
 }
 
