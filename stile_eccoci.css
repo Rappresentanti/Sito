@@ -1,5 +1,4 @@
 body { 
-  font-family: 'Arial', sans-serif; 
   margin: 0; 
   padding: 0; 
 }
@@ -35,7 +34,8 @@ body {
 #countdown { 
   font-size: 1.5em; 
   text-align: center; 
-  margin: 20px 0; 
+  margin: 20px 0;
+  font-family: 'Clock', sans-serif;
 }
 
 .news-section { 
@@ -50,6 +50,11 @@ body {
 @font-face{
   font-family: 'Lemon';
   src: url('Fonts/Lemon.ttf')
+}
+
+@font-face{
+  font-family: 'Clock';
+  src: url('Fonts/alarm\ clock.ttf')
 }
 
 @media (max-width: 768px) {
