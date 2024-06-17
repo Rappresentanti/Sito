@@ -37,13 +37,14 @@
       position: absolute;
       left: 160px; /* Posiziona il menu a destra del logo */
       top: 10px; /* Allinea il menu verticalmente al logo */
+      z-index: 1; /* Porta il menu in primo piano */
     }
     .menu a {
       opacity: 0;
       transform: translateX(-50px);
       transition: opacity 0.5s, transform 0.5s;
       margin: 5px 0;
-      font-size: 18px; /* Aumenta la dimensione del testo */
+      font-size: 24px; /* Aumenta ulteriormente la dimensione del testo */
     }
     .menu.show {
       max-height: 200px; /* Regolare in base all'altezza del contenuto */
@@ -123,16 +124,14 @@
     if (menu.classList.contains('show')) {
       // Nascondi menu
       var links = menu.querySelectorAll('a');
-      links.forEach(function(link, index) {
-        setTimeout(function() {
-          link.style.opacity = '0';
-          link.style.transform = 'translateX(-50px)';
-        }, (links.length - index - 1) * 100); // Reverse order with delay
+      links.forEach(function(link) {
+        link.style.opacity = '0';
+        link.style.transform = 'translateX(-50px)';
       });
       setTimeout(function() {
         menu.classList.remove('show');
         logo.style.transform = 'scale(1)';
-      }, links.length * 100 + 500);
+      }, 500);
     } else {
       // Mostra menu
       menu.classList.add('show');
