@@ -119,7 +119,7 @@ body {
 }
 
 .news-section {
-  display: grid;
+  display: block;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 20px;
   padding: 20px;
