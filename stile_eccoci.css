@@ -64,7 +64,6 @@ body {
 
 .menu.show a {
   opacity: 1;
-  transform: translateX(20px); /* Farli arrivare un po' più a destra */
 }
 
 .social-icons {
