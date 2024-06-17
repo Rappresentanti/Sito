@@ -150,6 +150,13 @@ body {
   font-size: 0.8em;
 }
 
+.news-card:hover{
+  background-color: #979735;
+  transform: scale(1.05);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
 @font-face { 
   font-family: 'RussianFont'; 
   src: url('Fonts/Russian.ttf'); 
