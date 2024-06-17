@@ -26,6 +26,8 @@ var x = setInterval(function() {
     document.getElementById("countdown").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+// Animazione del menu
 document.getElementById('logo').addEventListener('click', function() {
   var menu = document.getElementById('menu');
   var logo = this;
