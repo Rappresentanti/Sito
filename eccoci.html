@@ -87,9 +87,9 @@
     <img src="Images/logo.png" alt="Logo" id="logo">
   </div>
   <div class="menu" id="menu">
-    <a href="#manifesto" style="transition-delay: 0.4s;">Manifesto</a>
-    <a href="#iscriviti" style="transition-delay: 0.2s;">Iscriviti</a>
-    <a href="#chi-siamo" style="transition-delay: 0s;">Chi Siamo</a>
+    <a href="#manifesto">Manifesto</a>
+    <a href="#iscriviti">Iscriviti</a>
+    <a href="#chi-siamo">Chi Siamo</a>
   </div>
 </div>
 <div class="social-icons">
@@ -139,10 +139,11 @@
       logo.style.transform = 'scale(1.5)'; // Aumenta la dimensione del logo
       var links = menu.querySelectorAll('a');
       links.forEach(function(link, index) {
+        link.style.transitionDelay = (index * 0.2) + 's'; // Imposta delay progressivo
         setTimeout(function() {
           link.style.opacity = '1';
           link.style.transform = 'translateX(20px)'; // Farli arrivare un po' più a destra
-        }, index * 200);
+        }, 50);
       });
     }
   });
