@@ -8,23 +8,95 @@ body {
   display: flex; 
   justify-content: space-between; 
   padding: 10px; 
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
 }
 
 .navbar img { 
   height: 50px; 
 }
 
-.menu a { 
-  color: white; 
-  text-decoration: none; 
-  padding: 10 10px; 
-  font-family: 'Lemon', sans-serif;
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px; /* Puoi regolare la larghezza come preferisci */
+  aspect-ratio: 1;
+  margin-bottom: 10px;
 }
 
-.social-icons img { 
-  height: 40px; 
-  margin-left: 10px; 
+#logo {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+  cursor: pointer;
 }
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  position: absolute;
+  left: 160px; /* Posiziona il menu a destra del logo */
+  top: 10px; /* Allinea il menu verticalmente al logo */
+  z-index: 1; /* Porta il menu in primo piano */
+}
+
+.menu a { 
+  color: white; 
+  opacity: 0;
+  text-decoration: none; 
+  transform: translateX(-50px);
+  transition: opacity 0.5s, transform 0.5s;
+  padding: 10 10px; 
+  font-family: 'Lemon', sans-serif;
+  font-size: 24px;
+  white-space: nowrap;
+}
+
+.menu.show {
+  max-height: 200px; /* Regolare in base all'altezza del contenuto */
+}
+
+.menu.show a {
+  opacity: 1;
+  transform: translateX(20px); /* Farli arrivare un po' più a destra */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.social-icons a img, .navbar img {
+  transition: transform 0.2s;
+}
+
+.social-icons a:active img,
+.menu a:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icon-label {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
 #votaci { 
   font-family: 'RussianFont', sans-serif; 
   font-size: 4em; 

@@ -5,81 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VOTA PER NOI</title>
   <link rel="stylesheet" href="stile_eccoci.css">
-  <style>
-    .navbar {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      position: relative;
-      width: 100%;
-      padding: 10px;
-    }
-    .logo-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 150px; /* Puoi regolare la larghezza come preferisci */
-      aspect-ratio: 1;
-      margin-bottom: 10px;
-    }
-    #logo {
-      width: 100%;
-      height: auto;
-      transition: transform 0.5s ease;
-      cursor: pointer;
-    }
-    .menu {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      overflow: hidden;
-      transition: max-height 0.5s ease-out;
-      position: absolute;
-      left: 160px; /* Posiziona il menu a destra del logo */
-      top: 10px; /* Allinea il menu verticalmente al logo */
-      z-index: 1; /* Porta il menu in primo piano */
-    }
-    .menu a {
-      opacity: 0;
-      transform: translateX(-50px);
-      transition: opacity 0.5s, transform 0.5s;
-      margin: 5px 0;
-      font-size: 24px; /* Aumenta ulteriormente la dimensione del testo */
-      white-space: nowrap; /* Evita il wrapping del testo */
-    }
-    .menu.show {
-      max-height: 200px; /* Regolare in base all'altezza del contenuto */
-    }
-    .menu.show a {
-      opacity: 1;
-      transform: translateX(20px); /* Farli arrivare un po' più a destra */
-    }
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      gap: 10px;
-      margin-top: 20px;
-    }
-    .social-icons a {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .social-icons a img, .navbar img {
-      transition: transform 0.2s;
-    }
-    .social-icons a:active img,
-    .menu a:active {
-      transform: scale(0.95);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    .icon-label {
-      font-size: 12px;
-      margin-top: 5px;
-    }
-  </style>
 </head>
 <body>
 <div class="navbar">
@@ -118,35 +43,7 @@
 </div>
 
 <script>
-  document.getElementById('logo').addEventListener('click', function() {
-    var menu = document.getElementById('menu');
-    var logo = this;
-    
-    if (menu.classList.contains('show')) {
-      // Nascondi menu
-      var links = menu.querySelectorAll('a');
-      links.forEach(function(link) {
-        link.style.opacity = '0';
-        link.style.transform = 'translateX(-50px)';
-      });
-      setTimeout(function() {
-        menu.classList.remove('show');
-        logo.style.transform = 'scale(1)';
-      }, 500);
-    } else {
-      // Mostra menu
-      menu.classList.add('show');
-      logo.style.transform = 'scale(1.5)'; // Aumenta la dimensione del logo
-      var links = menu.querySelectorAll('a');
-      links.forEach(function(link, index) {
-        link.style.transitionDelay = (index * 0.2) + 's'; // Imposta delay progressivo
-        setTimeout(function() {
-          link.style.opacity = '1';
-          link.style.transform = 'translateX(20px)'; // Farli arrivare un po' più a destra
-        }, 50);
-      });
-    }
-  });
+
 </script>
 
 </body>
