@@ -43,13 +43,14 @@
       transform: translateX(-50px);
       transition: opacity 0.5s, transform 0.5s;
       margin: 5px 0;
+      font-size: 18px; /* Aumenta la dimensione del testo */
     }
     .menu.show {
       max-height: 200px; /* Regolare in base all'altezza del contenuto */
     }
     .menu.show a {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateX(20px); /* Farli arrivare un po' più a destra */
     }
     .social-icons {
       display: flex;
@@ -140,7 +141,7 @@
       links.forEach(function(link, index) {
         setTimeout(function() {
           link.style.opacity = '1';
-          link.style.transform = 'translateX(0)';
+          link.style.transform = 'translateX(20px)'; // Farli arrivare un po' più a destra
         }, index * 200);
       });
     }
