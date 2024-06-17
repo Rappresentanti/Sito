@@ -34,6 +34,9 @@
       align-items: flex-start;
       overflow: hidden;
       transition: max-height 0.5s ease-out;
+      position: absolute;
+      left: 160px; /* Posiziona il menu a destra del logo */
+      top: 10px; /* Allinea il menu verticalmente al logo */
     }
     .menu a {
       opacity: 0;
@@ -81,9 +84,9 @@
     <img src="Images/logo.png" alt="Logo" id="logo">
   </div>
   <div class="menu" id="menu">
-    <a href="#manifesto" style="transition-delay: 0s;">Manifesto</a>
+    <a href="#manifesto" style="transition-delay: 0.4s;">Manifesto</a>
     <a href="#iscriviti" style="transition-delay: 0.2s;">Iscriviti</a>
-    <a href="#chi-siamo" style="transition-delay: 0.4s;">Chi Siamo</a>
+    <a href="#chi-siamo" style="transition-delay: 0s;">Chi Siamo</a>
   </div>
 </div>
 <div class="social-icons">
@@ -123,7 +126,7 @@
         setTimeout(function() {
           link.style.opacity = '0';
           link.style.transform = 'translateX(-50px)';
-        }, index * 100);
+        }, (links.length - index - 1) * 100); // Reverse order with delay
       });
       setTimeout(function() {
         menu.classList.remove('show');
