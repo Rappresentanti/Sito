@@ -27,6 +27,12 @@ body {
   margin-bottom: 10px;
 }
 
+.logo-container:hover{
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
 #logo {
   width: 100%;
   height: auto;
@@ -48,6 +54,7 @@ body {
 
 .menu a { 
   color: white; 
+  margin: 0;
   opacity: 0;
   text-decoration: none; 
   transform: translateX(-50px);
