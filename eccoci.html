@@ -8,26 +8,38 @@
   <style>
     .navbar {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
+      justify-content: space-between;
       position: relative;
+      width: 100%;
+      padding: 10px;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
     }
     .menu {
-      max-height: 0;
-      overflow: hidden;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+      overflow: hidden;
       transition: max-height 0.5s ease-out;
+    }
+    .menu a {
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: opacity 0.5s, transform 0.5s;
     }
     .menu.show {
       max-height: 200px; /* Regolare in base all'altezza del contenuto */
     }
-    .menu img {
-      cursor: pointer;
+    .menu.show a {
+      opacity: 1;
+      transform: translateY(0);
     }
     .social-icons {
-      margin-top: 10px;
       display: flex;
       justify-content: center;
       width: 100%;
@@ -48,7 +60,7 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     .navbar img:active {
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
     .icon-label {
       font-size: 12px;
@@ -58,27 +70,28 @@
 </head>
 <body>
 <div class="navbar">
-  <img src="Images/logo.png" alt="Logo" id="logo">
-  <img src="Images/menu.png" alt="Menu" id="menu-icon" style="cursor: pointer;">
+  <div class="logo-container">
+    <img src="Images/logo.png" alt="Logo" id="logo" style="width: 100px; cursor: pointer;">
+  </div>
   <div class="menu" id="menu">
-    <a href="#manifesto">Manifesto</a>
-    <a href="#iscriviti">Iscriviti</a>
-    <a href="#chi-siamo">Chi Siamo</a>
+    <a href="#manifesto" style="transition-delay: 0s;">Manifesto</a>
+    <a href="#iscriviti" style="transition-delay: 0.2s;">Iscriviti</a>
+    <a href="#chi-siamo" style="transition-delay: 0.4s;">Chi Siamo</a>
   </div>
-  <div class="social-icons">
-    <a href="#instagram">
-      <img src="Images/instagram.png" alt="Instagram">
-      <span class="icon-label">Instagram</span>
-    </a>
-    <a href="#newsletter">
-      <img src="Images/newsletter_new.png" alt="Newsletter">
-      <span class="icon-label">Newsletter</span>
-    </a>
-    <a href="#whatsapp">
-      <img src="Images/whatsapp.png" alt="WhatsApp">
-      <span class="icon-label">WhatsApp</span>
-    </a>
-  </div>
+</div>
+<div class="social-icons">
+  <a href="#instagram">
+    <img src="Images/instagram.png" alt="Instagram">
+    <span class="icon-label">Instagram</span>
+  </a>
+  <a href="#newsletter">
+    <img src="Images/newsletter_new.png" alt="Newsletter">
+    <span class="icon-label">Newsletter</span>
+  </a>
+  <a href="#whatsapp">
+    <img src="Images/whatsapp.png" alt="WhatsApp">
+    <span class="icon-label">WhatsApp</span>
+  </a>
 </div>
 <div id="votaci">Votaci</div>
 <div id="countdown"></div>
@@ -92,23 +105,36 @@
 </div>
 
 <script>
-  document.getElementById('menu-icon').addEventListener('click', function() {
+  document.getElementById('logo').addEventListener('click', function() {
     var menu = document.getElementById('menu');
+    var logo = this;
+    
     if (menu.classList.contains('show')) {
-      menu.classList.remove('show');
+      // Hide menu
+      var links = menu.querySelectorAll('a');
+      links.forEach(function(link, index) {
+        setTimeout(function() {
+          link.style.opacity = '0';
+          link.style.transform = 'translateY(-20px)';
+        }, index * 100);
+      });
+      setTimeout(function() {
+        menu.classList.remove('show');
+        logo.style.transform = 'scale(1)';
+      }, links.length * 100 + 500);
     } else {
+      // Show menu
       menu.classList.add('show');
+      logo.style.transform = 'scale(1.2)';
+      var links = menu.querySelectorAll('a');
+      links.forEach(function(link, index) {
+        setTimeout(function() {
+          link.style.opacity = '1';
+          link.style.transform = 'translateY(0)';
+        }, index * 200);
+      });
     }
   });
-  
-  document.getElementById('logo').addEventListener('click', function() {
-    var logo = this;
-    logo.style.transform = 'scale(1.1)';
-    setTimeout(function() {
-      logo.style.transform = 'scale(1)';
-    }, 200);
-  });
-  
 </script>
 
 </body>
