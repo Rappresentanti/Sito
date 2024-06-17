@@ -75,6 +75,11 @@ body {
   margin-top: 20px;
 }
 
+.social-icons img { 
+  height: 40px;  
+  margin-left: 10px; 
+}
+
 .social-icons a {
   display: flex;
   flex-direction: column;
