@@ -6,15 +6,6 @@
   <title>VOTA PER NOI</title>
   <link rel="stylesheet" href="stile_eccoci.css">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-    }
     .navbar {
       display: flex;
       flex-direction: column;
@@ -45,12 +36,8 @@
       transition: max-height 0.5s ease-out;
       position: absolute;
       left: 160px; /* Posiziona il menu a destra del logo */
-      top: calc(100% + 10px); /* Allinea il menu sotto il logo */
+      top: 10px; /* Allinea il menu verticalmente al logo */
       z-index: 1; /* Porta il menu in primo piano */
-      background-color: white; /* Aggiunge sfondo bianco al menu */
-      padding: 10px; /* Aggiunge spazio intorno ai link */
-      border-radius: 5px; /* Angoli arrotondati per il menu */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera */
     }
     .menu a {
       opacity: 0;
@@ -59,14 +46,13 @@
       margin: 5px 0;
       font-size: 24px; /* Aumenta ulteriormente la dimensione del testo */
       white-space: nowrap; /* Evita il wrapping del testo */
-      position: relative;
     }
     .menu.show {
       max-height: 200px; /* Regolare in base all'altezza del contenuto */
     }
     .menu.show a {
       opacity: 1;
-      transform: translateX(0); /* Farli arrivare a sinistra */
+      transform: translateX(20px); /* Farli arrivare un po' più a destra */
     }
     .social-icons {
       display: flex;
@@ -156,7 +142,7 @@
         link.style.transitionDelay = (index * 0.2) + 's'; // Imposta delay progressivo
         setTimeout(function() {
           link.style.opacity = '1';
-          link.style.transform = 'translateX(0)'; // Farli arrivare a sinistra
+          link.style.transform = 'translateX(20px)'; // Farli arrivare un po' più a destra
         }, 50);
       });
     }
