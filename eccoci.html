@@ -26,11 +26,22 @@
     .social-icons {
       margin-top: 10px;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       width: 100%;
+      gap: 10px;
     }
-    .menu img {
-      cursor: pointer;
+    .social-icons a {
+      display: inline-block;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .social-icons a:active,
+    .menu a:active {
+      transform: scale(0.95);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .description {
+      margin-top: 10px;
+      text-align: center;
     }
   </style>
 </head>
@@ -47,6 +58,9 @@
     <a href="#instagram"><img src="Images/instagram.png" alt="Instagram"></a>
     <a href="#newsletter"><img src="Images/newsletter_new.png" alt="Newsletter"></a>
     <a href="#whatsapp"><img src="Images/whatsapp.png" alt="WhatsApp"></a>
+  </div>
+  <div class="description">
+    <p>Seguici sui nostri canali social per rimanere aggiornato!</p>
   </div>
 </div>
 <div id="votaci">Votaci</div>
