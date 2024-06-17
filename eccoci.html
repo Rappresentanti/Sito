@@ -23,6 +23,9 @@
     .menu.show {
       max-height: 200px; /* Regolare in base all'altezza del contenuto */
     }
+    .menu img {
+      cursor: pointer;
+    }
     .social-icons {
       margin-top: 10px;
       display: flex;
@@ -31,23 +34,31 @@
       gap: 10px;
     }
     .social-icons a {
-      display: inline-block;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       transition: transform 0.2s, box-shadow 0.2s;
     }
-    .social-icons a:active,
+    .social-icons a img, .navbar img {
+      transition: transform 0.2s;
+    }
+    .social-icons a:active img,
     .menu a:active {
       transform: scale(0.95);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-    .description {
-      margin-top: 10px;
-      text-align: center;
+    .navbar img:active {
+      transform: scale(1.1);
+    }
+    .icon-label {
+      font-size: 12px;
+      margin-top: 5px;
     }
   </style>
 </head>
 <body>
 <div class="navbar">
-  <img src="Images/logo.png" alt="Logo">
+  <img src="Images/logo.png" alt="Logo" id="logo">
   <img src="Images/menu.png" alt="Menu" id="menu-icon" style="cursor: pointer;">
   <div class="menu" id="menu">
     <a href="#manifesto">Manifesto</a>
@@ -55,12 +66,18 @@
     <a href="#chi-siamo">Chi Siamo</a>
   </div>
   <div class="social-icons">
-    <a href="#instagram"><img src="Images/instagram.png" alt="Instagram"></a>
-    <a href="#newsletter"><img src="Images/newsletter_new.png" alt="Newsletter"></a>
-    <a href="#whatsapp"><img src="Images/whatsapp.png" alt="WhatsApp"></a>
-  </div>
-  <div class="description">
-    <p>Seguici sui nostri canali social per rimanere aggiornato!</p>
+    <a href="#instagram">
+      <img src="Images/instagram.png" alt="Instagram">
+      <span class="icon-label">Instagram</span>
+    </a>
+    <a href="#newsletter">
+      <img src="Images/newsletter_new.png" alt="Newsletter">
+      <span class="icon-label">Newsletter</span>
+    </a>
+    <a href="#whatsapp">
+      <img src="Images/whatsapp.png" alt="WhatsApp">
+      <span class="icon-label">WhatsApp</span>
+    </a>
   </div>
 </div>
 <div id="votaci">Votaci</div>
@@ -82,6 +99,14 @@
     } else {
       menu.classList.add('show');
     }
+  });
+  
+  document.getElementById('logo').addEventListener('click', function() {
+    var logo = this;
+    logo.style.transform = 'scale(1.1)';
+    setTimeout(function() {
+      logo.style.transform = 'scale(1)';
+    }, 200);
   });
 </script>
 
