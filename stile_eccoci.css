@@ -81,17 +81,25 @@ body {
   align-items: center;
   height: 40px;  
   margin-left: 10px; 
+  filter: none;
 }
 
 .social-icons a {
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  color: red; 
   align-items: center;
   transition: transform 0.2s, box-shadow 0.2s;
+  font-family: 'Lemon', sans-serif;
 }
 
 .social-icons a img, .navbar img {
   transition: transform 0.2s;
+}
+
+.social-icons a img {
+  background-color: transparent; /* Imposta lo sfondo delle immagini a trasparente */
 }
 
 .social-icons a:active img,
@@ -103,6 +111,11 @@ body {
 .icon-label {
   font-size: 12px;
   margin-top: 5px;
+}
+
+.social-icons a .icon-label {
+  display: block; /* Assicura che il testo sia su una nuova riga */
+  color: red; /* Imposta il colore del testo a rosso */
 }
 
 #votaci { 
@@ -140,8 +153,8 @@ body {
 }
 
 .news-card:hover {
-  background-color: #979735;
-  transform: scale(1.25);
+  background-color: #ffff7b;
+  transform: scale(1.05);
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
