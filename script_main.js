@@ -3,7 +3,6 @@ var countDownDate = new Date("Oct 6, 2024 23:59:59").getTime();
 
 // Aggiorna il countdown ogni secondo
 var x = setInterval(function() {
-
   // Ottieni la data e l'ora di oggi
   var now = new Date().getTime();
 
@@ -27,33 +26,46 @@ var x = setInterval(function() {
   }
 }, 1000);
 
-// Animazione del menu
-document.getElementById('logo').addEventListener('click', function() {
+// Rileva se l'utente sta utilizzando un dispositivo mobile
+function isMobile() {
+  return window.matchMedia("only screen and (max-width: 760px)").matches;
+}
+
+// Gestione del comportamento del logo e del menu
+document.addEventListener('DOMContentLoaded', function() {
   var menu = document.getElementById('menu');
-  var logo = this;
-  
-  if (menu.classList.contains('show')) {
-    // Nascondi menu
-    var links = menu.querySelectorAll('a');
-    links.forEach(function(link) {
-      link.style.opacity = '0';
-      link.style.transform = 'translateX(-50px)';
-    });
-    setTimeout(function() {
-      menu.classList.remove('show');
-      logo.style.transform = 'scale(1)';
-    }, 500);
-  } else {
-    // Mostra menu
+  var logo = document.getElementById('logo');
+
+  if (isMobile()) {
+    // Se è un dispositivo mobile, mostra il menu senza ulteriori click
     menu.classList.add('show');
-    logo.style.transform = 'scale(1.5)'; // Aumenta la dimensione del logo
-    var links = menu.querySelectorAll('a');
-    links.forEach(function(link, index) {
-      link.style.transitionDelay = (index * 0.2) + 's'; // Imposta delay progressivo
-      setTimeout(function() {
-        link.style.opacity = '1';
-        link.style.transform = 'translateX(20px)'; // Farli arrivare un po' più a destra
-      }, 50);
+  } else {
+    // Se è un desktop, rendi il logo clickabile per mostrare il menu
+    logo.addEventListener('click', function() {
+      if (menu.classList.contains('show')) {
+        // Nascondi menu
+        var links = menu.querySelectorAll('a');
+        links.forEach(function(link) {
+          link.style.opacity = '0';
+          link.style.transform = 'translateX(-50px)';
+        });
+        setTimeout(function() {
+          menu.classList.remove('show');
+          logo.style.transform = 'scale(1)';
+        }, 500);
+      } else {
+        // Mostra menu
+        menu.classList.add('show');
+        logo.style.transform = 'scale(1.5)'; // Aumenta la dimensione del logo
+        var links = menu.querySelectorAll('a');
+        links.forEach(function(link, index) {
+          link.style.transitionDelay = (index * 0.2) + 's'; // Imposta delay progressivo
+          setTimeout(function() {
+            link.style.opacity = '1';
+            link.style.transform = 'translateX(20px)'; // Farli arrivare un po' più a destra
+          }, 50);
+        });
+      }
     });
   }
 });
