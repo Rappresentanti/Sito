@@ -1,7 +1,19 @@
 body { 
     margin: 0; 
     padding: 0; 
-  }
+}
+
+h2{
+  font-family: 'Lemon', sans-serif;
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+p{
+  font-family: 'Lemon', sans-serif;
+    font-size: 12px;
+    white-space: nowrap;
+}
   
   .navbar { 
     background-color: red; 
