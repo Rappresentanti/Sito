@@ -6,13 +6,13 @@ body {
 h2{
   font-family: 'Lemon', sans-serif;
     font-size: 24px;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 p{
   font-family: 'Lemon', sans-serif;
     font-size: 12px;
-    white-space: nowrap;
+    white-space: normal;
 }
   
   .navbar { 
