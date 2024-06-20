@@ -1,21 +1,4 @@
-body { 
-    margin: 0; 
-    padding: 0; 
-}
-
-h2{
-  font-family: 'Lemon', sans-serif;
-    font-size: 24px;
-    white-space: normal;
-}
-
-p{
-  font-family: 'Lemon', sans-serif;
-    font-size: 12px;
-    white-space: normal;
-}
-  
-  .navbar { 
+ .navbar { 
     background-color: red; 
     display: flex; 
     justify-content: space-between; 

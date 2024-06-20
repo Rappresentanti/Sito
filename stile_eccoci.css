@@ -1,8 +1,3 @@
-body { 
-  margin: 0; 
-  padding: 0; 
-}
-
 .navbar { 
   background-color: red; 
   display: flex; 
@@ -20,17 +15,11 @@ body {
 
 .logo-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   width: 150px; /* Puoi regolare la larghezza come preferisci */
   aspect-ratio: 1;
   margin-bottom: 10px;
-}
-
-.logo-container:hover{
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
 }
 
 #logo {
