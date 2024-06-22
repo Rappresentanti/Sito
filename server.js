@@ -1,67 +1,60 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
 const mongoose = require('mongoose');
+const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser');
 
 const app = express();
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/newsletter', { useNewUrlParser: true, useUnifiedTopology: true });
-
-// Define a schema and model for users
-const userSchema = new mongoose.Schema({
-  name: String,
-  email: String
+// Connessione a MongoDB
+mongoose.connect('mongodb://localhost:27017/tuo_database', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
+
+const userSchema = new mongoose.Schema({
+    email: String,
+    name: String
+});
+
 const User = mongoose.model('User', userSchema);
 
-// POST endpoint to register a new user
-app.post('/api/register', async (req, res) => {
-  const { name, email } = req.body;
-
-  try {
-    const newUser = new User({ name, email });
-    await newUser.save();
-    res.json({ success: true });
-  } catch (error) {
-    console.error(error);
-    res.json({ success: false });
-  }
-});
-
-// Function to send emails
-async function sendNewsletter() {
-  const users = await User.find({});
-  const transporter = nodemailer.createTransport({
+// Configura nodemailer
+const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'your-email@gmail.com',
-      pass: 'your-email-password'
+        user: 'tuoemail@gmail.com',
+        pass: 'tuapassword'
     }
-  });
+});
 
-  users.forEach(user => {
-    const mailOptions = {
-      from: 'your-email@gmail.com',
-      to: user.email,
-      subject: 'Newsletter Update',
-      text: 'Here are the latest updates...'
-    };
-
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.error(error);
-      } else {
-        console.log('Email sent: ' + info.response);
-      }
+// Rotta per gestire la registrazione degli utenti
+app.post('/iscriviti', (req, res) => {
+    const newUser = new User({
+        email: req.body.email,
+        name: req.body.name
     });
-  });
-}
 
-// Call sendNewsletter() at desired intervals
-// setInterval(sendNewsletter, 86400000); // Example: send every 24 hours
+    newUser.save()
+        .then(() => {
+            const mailOptions = {
+                from: 'tuoemail@gmail.com',
+                to: newUser.email,
+                subject: 'Benvenuto!',
+                text: `Ciao ${newUser.name}, grazie per esserti registrato!`
+            };
+
+            transporter.sendMail(mailOptions, (error, info) => {
+                if (error) {
+                    return res.status(500).send(error.toString());
+                }
+                res.status(200).send('Registrazione completata e email inviata');
+            });
+        })
+        .catch(err => res.status(500).send(err.toString()));
+});
 
 app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+    console.log('Server in esecuzione sulla porta 3000');
 });
