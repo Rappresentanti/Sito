@@ -23,11 +23,6 @@ header {
   transition: transform 0.5s ease;
 }
 
-.logo-container:hover img {
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 .menu {
   display: flex;
   gap: 15px;
@@ -91,7 +86,7 @@ header {
 }
 
 h2, h3 {
-  font-family: 'Clock', sans-serif;
+  font-family: 'RussianFont', sans-serif;
 }
 
 p, ul {
