@@ -7,7 +7,6 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Connessione a MongoDB
 mongoose.connect('mongodb://localhost:27017/tuo_database', {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -20,7 +19,6 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', userSchema);
 
-// Configura nodemailer
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -29,7 +27,6 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-// Rotta per gestire la registrazione degli utenti
 app.post('/iscriviti', (req, res) => {
     const newUser = new User({
         email: req.body.email,

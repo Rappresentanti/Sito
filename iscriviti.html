@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iscriviti</title>
-  <link rel="icon" type="image/x-icon" href="Images/logo.ico">
-  <link rel="stylesheet" href="stile_iscriviti.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iscriviti</title>
+    <link rel="icon" type="image/x-icon" href="Images/logo.ico">
+    <link rel="stylesheet" href="stile_iscriviti.css">
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-      <img src="Images/logo.png" alt="Logo">
-    </div>
-    <nav class="menu" id="menu">
-        <a href="manifesto.html">Manifesto</a>
-        <a href="iscriviti.html">Iscriviti</a>
-        <a href="chi-siamo.html">Chi Siamo</a>
-      </nav>
-    <div class="social-icons">
-        <a href="#instagram">
-          <img src="Images/instagram.png" alt="Instagram">
-          <span class="icon-label">Instagram</span>
-        </a>
-        <a href="#newsletter">
-          <img src="Images/newsletter_new.png" alt="Newsletter">
-          <span class="icon-label">Newsletter</span>
-        </a>
-        <a href="#whatsapp">
-          <img src="Images/whatsapp.png" alt="WhatsApp">
-          <span class="icon-label">WhatsApp</span>
-        </a>
-      </div>
-  </header>
-  <div class="content">
-    <h1>Iscriviti alla Newsletter</h1>
+    <header class="navbar">
+        <div class="logo-container">
+          <img src="Images/logo.png" alt="Logo" id="logo">
+        </div>
+        <nav class="menu" id="menu">
+          <a href="manifesto.html">Manifesto</a>
+          <a href="iscriviti.html">Iscriviti</a>
+          <a href="chi-siamo.html">Chi Siamo</a>
+        </nav>
+        <div class="social-icons">
+          <a href="#instagram">
+            <img src="Images/instagram.png" alt="Instagram">
+            <span class="icon-label">Instagram</span>
+          </a>
+          <a href="#newsletter">
+            <img src="Images/newsletter_new.png" alt="Newsletter">
+            <span class="icon-label">Newsletter</span>
+          </a>
+          <a href="#whatsapp">
+            <img src="Images/whatsapp.png" alt="WhatsApp">
+            <span class="icon-label">WhatsApp</span>
+          </a>
+        </div>
+      </header>
+    <h1>Iscriviti alla nostra Newsletter</h1>
+    <p>Compila il modulo sottostante per ricevere aggiornamenti e notizie direttamente nella tua casella email.</p>
     <form id="registrationForm">
+        <label for="name">Nome:</label>
         <input type="text" id="name" name="name" placeholder="Nome" required>
+        <br>
+        <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="Email" required>
+        <br>
         <button type="submit">Iscriviti</button>
     </form>
-    <script src="iscriviti.js"></script>    
-    <p id="status"></p>
-  </div>
-  <script src="iscriviti.js"></script>
+    <script src="iscriviti.js"></script>
 </body>
 </html>
