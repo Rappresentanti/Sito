@@ -1,128 +1,108 @@
- .navbar { 
-    background-color: red; 
-    display: flex; 
-    justify-content: space-between; 
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    width: 100%;
-  }
-  
-  .navbar img { 
-    height: 50px; 
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 150px; /* Puoi regolare la larghezza come preferisci */
-    aspect-ratio: 1;
-    margin-bottom: 10px;
-  }
-  
-  .logo-container:hover{
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-  }
-  
-  #logo {
-    width: 100%;
-    height: auto;
-    transition: transform 0.5s ease;
-    cursor: pointer;
-  }
-  
-  .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-    position: absolute;
-    left: 160px; /* Posiziona il menu a destra del logo */
-    top: 10px; /* Allinea il menu verticalmente al logo */
-    z-index: 1; /* Porta il menu in primo piano */
-  }
-  
-  .menu a { 
-    color: white; 
-    margin: 0;
-    opacity: 0;
-    text-decoration: none; 
-    transform: translateX(-50px);
-    transition: opacity 0.5s, transform 0.5s;
-    padding: 10 10px; 
-    font-family: 'Lemon', sans-serif;
-    font-size: 24px;
-    white-space: nowrap;
-  }
-  
-  .menu.show {
-    max-height: 200px; /* Regolare in base all'altezza del contenuto */
-  }
-  
-  .menu.show a {
-    opacity: 1;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  .social-icons img { 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 40px;  
-    margin-left: 10px; 
-    filter: none;
-  }
-  
-  .social-icons a {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: red; 
-    align-items: center;
-    transition: transform 0.2s, box-shadow 0.2s;
-    font-family: 'Lemon', sans-serif;
-  }
-  
-  .social-icons a img, .navbar img {
-    transition: transform 0.2s;
-  }
-  
-  .social-icons a img {
-    background-color: transparent; /* Imposta lo sfondo delle immagini a trasparente */
-  }
-  
-  .social-icons a:active img,
-  .menu a:active {
-    transform: scale(0.95);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .icon-label {
-    font-size: 12px;
-    margin-top: 5px;
-  }
-  
-  .social-icons a .icon-label {
-    display: block; /* Assicura che il testo sia su una nuova riga */
-    color: red; /* Imposta il colore del testo a rosso */
-  }
-  
-  #manifesto { 
-    font-family: 'RussianFont', sans-serif; 
-    font-size: 4em; 
-    text-align: center; 
-  }
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.logo-container img {
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.logo-container:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Lemon', sans-serif;
+  font-size: 18px;
+  transition: opacity 0.5s, transform 0.5s;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.menu a:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-icons a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: red;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.social-icons img {
+  height: 40px;
+  transition: transform 0.2s;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1);
+}
+
+.icon-label {
+  font-size: 12px;
+  margin-top: 5px;
+  color: red;
+}
+
+.content {
+  padding: 20px;
+}
+
+#manifesto h1 {
+  font-family: 'RussianFont', sans-serif;
+  font-size: 4em;
+  text-align: center;
+}
+
+h2, h3 {
+  font-family: 'Clock', sans-serif;
+}
+
+p, ul {
+  font-family: 'Lemon', sans-serif;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+ul {
+  padding-left: 20px;
+}
 
 @font-face {
   font-family: 'RussianFont';
@@ -139,15 +119,57 @@
   src: url('Fonts/alarm-clock.ttf');
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .navbar {
+  header {
     flex-direction: column;
     align-items: center;
   }
   .menu {
     flex-direction: column;
+    align-items: center;
+  }
+  .menu a {
+    padding: 10px 0;
   }
   .social-icons {
     justify-content: center;
+  }
+  #manifesto h1 {
+    font-size: 2.5em;
+  }
+  .content {
+    padding: 10px;
+  }
+  p, ul {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container img {
+    height: 40px;
+  }
+  .menu a {
+    font-size: 16px;
+    padding: 8px 0;
+  }
+  .social-icons img {
+    height: 30px;
+  }
+  .icon-label {
+    font-size: 10px;
+  }
+  #manifesto h1 {
+    font-size: 2em;
+  }
+  h2, h3 {
+    font-size: 1.2em;
+  }
+  p, ul {
+    font-size: 14px;
+  }
+  ul {
+    padding-left: 15px;
   }
 }
