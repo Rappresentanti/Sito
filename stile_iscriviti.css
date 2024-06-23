@@ -23,14 +23,14 @@ header {
   transition: transform 0.5s ease;
 }
 
-nav.menu {
+header.menu {
   display: flex;
   gap: 15px;
   align-items: center;
   flex-wrap: wrap;
 }
 
-nav.menu a {
+header.menu a {
   color: white;
   text-decoration: none;
   font-family: 'Lemon', sans-serif;
@@ -40,7 +40,7 @@ nav.menu a {
   white-space: nowrap;
 }
 
-nav.menu a:hover {
+header.menu a:hover {
   transform: translateY(-2px);
   opacity: 0.8;
 }
