@@ -1,57 +1,37 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
 
 const app = express();
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/tuo_database', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+app.post('/newsletter', (req, res) => {
+    const { email } = req.body;
 
-const userSchema = new mongoose.Schema({
-    email: String,
-    name: String
-});
-
-const User = mongoose.model('User', userSchema);
-
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: 'tuoemail@gmail.com',
-        pass: 'tuapassword'
-    }
-});
-
-app.post('/iscriviti', (req, res) => {
-    const newUser = new User({
-        email: req.body.email,
-        name: req.body.name
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'your-email@gmail.com',
+            pass: 'your-email-password'
+        }
     });
 
-    newUser.save()
-        .then(() => {
-            const mailOptions = {
-                from: 'tuoemail@gmail.com',
-                to: newUser.email,
-                subject: 'Benvenuto!',
-                text: `Ciao ${newUser.name}, grazie per esserti registrato!`
-            };
+    const mailOptions = {
+        from: 'your-email@gmail.com',
+        to: email,
+        subject: 'Welcome to our Newsletter',
+        text: 'Thank you for subscribing to our newsletter!'
+    };
 
-            transporter.sendMail(mailOptions, (error, info) => {
-                if (error) {
-                    return res.status(500).send(error.toString());
-                }
-                res.status(200).send('Registrazione completata e email inviata');
-            });
-        })
-        .catch(err => res.status(500).send(err.toString()));
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            return res.status(500).send(error.toString());
+        }
+        res.status(200).send('Newsletter sent: ' + info.response);
+    });
 });
 
 app.listen(3000, () => {
-    console.log('Server in esecuzione sulla porta 3000');
+    console.log('Server is running on port 3000');
 });
