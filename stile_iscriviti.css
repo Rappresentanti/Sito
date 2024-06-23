@@ -78,6 +78,8 @@ nav.menu a:hover {
 .content {
   padding: 20px;
   text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -88,6 +90,12 @@ p {
   font-size: 16px;
   color: #555;
   margin-bottom: 20px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 button {
@@ -154,4 +162,19 @@ button:hover {
   input, button {
     font-size: 14px;
   }
+}
+
+@font-face {
+  font-family: 'RussianFont';
+  src: url('Fonts/Russian.ttf');
+}
+
+@font-face {
+  font-family: 'Lemon';
+  src: url('Fonts/Lemon.ttf');
+}
+
+@font-face {
+  font-family: 'Clock';
+  src: url('Fonts/alarm-clock.ttf');
 }
