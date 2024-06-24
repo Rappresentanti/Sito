@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -22,14 +23,14 @@ header {
   transition: transform 0.5s ease;
 }
 
-nav.menu {
+.menu {
   display: flex;
   gap: 15px;
   align-items: center;
   flex-wrap: wrap;
 }
 
-nav.menu a {
+.menu a {
   color: white;
   text-decoration: none;
   font-family: 'Lemon', sans-serif;
@@ -39,7 +40,7 @@ nav.menu a {
   white-space: nowrap;
 }
 
-nav.menu a:hover {
+.menu a:hover {
   transform: translateY(-2px);
   opacity: 0.8;
 }
@@ -47,6 +48,7 @@ nav.menu a:hover {
 .social-icons {
   display: flex;
   gap: 15px;
+  align-items: center;
 }
 
 .social-icons a {
@@ -73,60 +75,28 @@ nav.menu a:hover {
   color: red;
 }
 
-#votaci {
-  font-family: 'RussianFont', sans-serif;
-  font-size: 4em;
-  text-align: center;
-  margin: 20px 0;
-}
-
-#countdown {
-  font-size: 1.5em;
-  text-align: center;
-  margin: 20px 0;
-  font-family: 'Clock', sans-serif;
-}
-
-.news-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 20px;
+.content {
   padding: 20px;
 }
 
-.news-card-wrapper {
-  display: contents;
+#manifesto h1 {
+  font-family: 'RussianFont', sans-serif;
+  font-size: 4em;
+  text-align: center;
 }
 
-.news-card {
-  border: 1px solid #ccc;
-  padding: 15px;
-  font-family: 'Times New Roman', serif;
-  background-color: #f5f5c0;
-  border-radius: 15px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+h2, h3 {
+  font-family: 'RussianFont', sans-serif;
 }
 
-.news-card:hover {
-  background-color: #ffff7b;
-  transform: scale(1.05);
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.news-card h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.news-card p {
-  font-size: 1em;
+p, ul {
+  font-family: 'Lemon', sans-serif;
   line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-.news-card time {
-  font-style: italic;
-  font-size: 0.8em;
+ul {
+  padding-left: 20px;
 }
 
 @font-face {
@@ -150,32 +120,32 @@ nav.menu a:hover {
     flex-direction: column;
     align-items: center;
   }
-  nav.menu {
+  .menu {
     flex-direction: column;
     align-items: center;
   }
-  nav.menu a {
+  .menu a {
     padding: 10px 0;
   }
   .social-icons {
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
   }
-  #votaci {
+  #manifesto h1 {
     font-size: 2.5em;
   }
-  #countdown {
-    font-size: 1.2em;
+  .content {
+    padding: 10px;
   }
-  .news-section {
-    grid-template-columns: 1fr;
+  p, ul {
+    font-size: 16px;
   }
 }
+
 @media (max-width: 480px) {
   .logo-container img {
     height: 40px;
   }
-  nav.menu a {
+  .menu a {
     font-size: 16px;
     padding: 8px 0;
   }
@@ -185,7 +155,7 @@ nav.menu a:hover {
   .icon-label {
     font-size: 10px;
   }
-  #votaci {
+  #manifesto h1 {
     font-size: 2em;
   }
   h2, h3 {
