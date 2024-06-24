@@ -47,7 +47,6 @@ nav.menu a:hover {
 .social-icons {
   display: flex;
   gap: 15px;
-  align-items: center;
 }
 
 .social-icons a {
