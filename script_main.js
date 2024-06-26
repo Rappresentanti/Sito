@@ -22,3 +22,7 @@ function updateCountdown() {
 
 // Aggiorna il countdown ogni secondo
 const interval = setInterval(updateCountdown, 1000);
+
+function cambiaOrientamento(orientamento) {
+  document.body.className = orientamento;
+}
