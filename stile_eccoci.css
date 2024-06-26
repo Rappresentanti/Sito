@@ -154,7 +154,7 @@ nav.menu a:hover {
 
 /* Stili per orientamento */
 body.sx {
-  background-color: red;
+  background-color: white;
   font-family: 'RussianFont', sans-serif;
 }
 
@@ -172,7 +172,7 @@ body.sx .icon-label {
 }
 
 body.dx {
-  background-color: blue;
+  background-color: white;
   font-family: 'Cinzel', serif;
 }
 
@@ -186,11 +186,11 @@ body.dx .social-icons a {
 }
 
 body.dx .icon-label {
-  color: white;
+  color: blue;
 }
 
 body.centro {
-  background-color: green;
+  background-color: white;
   font-family: 'Montserrat', sans-serif;
 }
 
