@@ -1,12 +1,11 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Stili comuni */
 header {
-  background-color: red;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,9 +29,7 @@ nav.menu {
 }
 
 nav.menu a {
-  color: white;
   text-decoration: none;
-  font-family: 'Lemon', sans-serif;
   font-size: 18px;
   transition: opacity 0.5s, transform 0.5s;
   padding: 10px;
@@ -54,7 +51,6 @@ nav.menu a:hover {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: red;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -70,11 +66,9 @@ nav.menu a:hover {
 .icon-label {
   font-size: 12px;
   margin-top: 5px;
-  color: red;
 }
 
 #votaci {
-  font-family: 'RussianFont', sans-serif;
   font-size: 4em;
   text-align: center;
   margin: 20px 0;
@@ -84,7 +78,6 @@ nav.menu a:hover {
   font-size: 1.5em;
   text-align: center;
   margin: 20px 0;
-  font-family: 'Clock', sans-serif;
 }
 
 .news-section {
@@ -101,7 +94,6 @@ nav.menu a:hover {
 .news-card {
   border: 1px solid #ccc;
   padding: 15px;
-  font-family: 'Times New Roman', serif;
   background-color: #f5f5c0;
   border-radius: 15px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -129,6 +121,7 @@ nav.menu a:hover {
   font-size: 0.8em;
 }
 
+/* Font face */
 @font-face {
   font-family: 'RussianFont';
   src: url('Fonts/Russian.ttf');
@@ -142,6 +135,76 @@ nav.menu a:hover {
 @font-face {
   font-family: 'Clock';
   src: url('Fonts/alarm-clock.ttf');
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  src: url('Fonts/Cinzel.ttf');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('Fonts/Merriweather-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('Fonts/Montserrat.ttf');
+}
+
+/* Stili per orientamento */
+body.sx {
+  background-color: red;
+  font-family: 'RussianFont', sans-serif;
+}
+
+body.sx nav.menu a {
+  color: white;
+  font-family: 'Lemon', sans-serif;
+}
+
+body.sx .social-icons a {
+  color: red;
+}
+
+body.sx .icon-label {
+  color: red;
+}
+
+body.dx {
+  background-color: blue;
+  font-family: 'Cinzel', serif;
+}
+
+body.dx nav.menu a {
+  color: white;
+  font-family: 'Merriweather', serif;
+}
+
+body.dx .social-icons a {
+  color: blue;
+}
+
+body.dx .icon-label {
+  color: blue;
+}
+
+body.centro {
+  background-color: green;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body.centro nav.menu a {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body.centro .social-icons a {
+  color: green;
+}
+
+body.centro .icon-label {
+  color: green;
 }
 
 /* Responsive Styles */

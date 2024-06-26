@@ -7,7 +7,7 @@
   <link rel="icon" type="image/x-icon" href="Images/logo.ico">
   <link rel="stylesheet" href="stile_eccoci.css">
 </head>
-<body>
+<body class="sx">
   <header class="navbar">
     <div class="logo-container">
       <img src="Images/logo.png" alt="Logo" id="logo">
@@ -18,19 +18,24 @@
       <a href="chi-siamo.html">Chi Siamo</a>
     </nav>
     <div class="social-icons">
-          <a href="#instagram">
-            <img src="Images/instagram.png" alt="Instagram">
-            <span class="icon-label">Instagram</span>
-          </a>
-          <a href="mailto:r2054511@gmail.com">
-            <img src="Images/newsletter_new.png" alt="Newsletter">
-            <span class="icon-label">Newsletter</span>
-          </a>
-          <a href="#whatsapp">
-            <img src="Images/whatsapp.png" alt="WhatsApp">
-            <span class="icon-label">WhatsApp</span>
-          </a>
-        </div>
+      <a href="#instagram">
+        <img src="Images/instagram.png" alt="Instagram">
+        <span class="icon-label">Instagram</span>
+      </a>
+      <a href="mailto:r2054511@gmail.com">
+        <img src="Images/newsletter_new.png" alt="Newsletter">
+        <span class="icon-label">Newsletter</span>
+      </a>
+      <a href="#whatsapp">
+        <img src="Images/whatsapp.png" alt="WhatsApp">
+        <span class="icon-label">WhatsApp</span>
+      </a>
+    </div>
+    <div class="political-buttons">
+      <button onclick="cambiaOrientamento('sx')">Sinistra</button>
+      <button onclick="cambiaOrientamento('dx')">Destra</button>
+      <button onclick="cambiaOrientamento('centro')">Centro</button>
+    </div>
   </header>
   <section id="votaci">Votaci</section>
   <section id="countdown"></section>
