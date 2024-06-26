@@ -159,7 +159,7 @@ body.sx {
 }
 
 body.sx nav.menu a {
-  color: white;
+  color: red;
   font-family: 'Lemon', sans-serif;
 }
 
@@ -177,7 +177,7 @@ body.dx {
 }
 
 body.dx nav.menu a {
-  color: white;
+  color: blue;
   font-family: 'Merriweather', serif;
 }
 
@@ -195,7 +195,7 @@ body.centro {
 }
 
 body.centro nav.menu a {
-  color: white;
+  color: green;
   font-family: 'Montserrat', sans-serif;
 }
 
